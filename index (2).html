@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+
+<head>
+<title>Veb dizajn - 29.01.2020.</title>
+<meta charset="UTF-8">
+<h1> Veb dizajn - IT - III godina - ISPIT - 29.01.2020.</h1>
+</head>
+
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="1800" height="1650" style="border:2px solid #000000;background-color:orange"></canvas>
+ </body>
+ 
+    <script type="text/javascript">
+		function draw() {
+		var canvas = document.getElementById('canvas');
+			if (canvas.getContext) {
+		var c = canvas.getContext('2d');
+	
+// Svetlo zeleni trougao
+  //  ctx.beginPath();
+//	ctx.lineWidth = 2;
+//	ctx.lineCap = "round";
+//	ctx.lineJoin = "round";
+ //   ctx.moveTo(50, 50);
+ //   ctx.lineTo(250, 50);
+ //   ctx.lineTo(50, 650);
+//	ctx.lineTo(50, 50);
+//	ctx.fillStyle = "lime";
+ //   ctx.fill();
+//	ctx.strokeStyle = "black";
+//	ctx.stroke();
+
+// Crvena kruznica u sredini poluprecnika 150 piksela
+//	ctx.beginPath();
+//	ctx.lineWidth = 2;
+//	ctx.lineCap = "round";
+//	ctx.lineJoin = "round";
+ //   ctx.arc(350, 350, 150, 0, Math.PI*2, true);
+//	ctx.fillStyle = "red";
+  //  ctx.fill();
+//	ctx.strokeStyle = "black";
+//	ctx.stroke();
+	
+// Crtanje zutog pravougaonika 300x150
+//	ctx.fillStyle="yellow";
+//	ctx.strokeStyle = "black";
+//	ctx.lineWidth = 2;
+//	ctx.lineCap = "round";
+//	ctx.lineJoin = "round";
+//	ctx.fillRect(350,500,300,150);
+//	ctx.strokeRect(350,500,300,150);	
+	c.fillStyle = "darkred"
+	c.lineWidth = 3;
+	c.moveTo(700,50)
+	c.lineTo(150,425)
+	c.lineTo(1650,425)
+	c.lineTo(1125,50)
+	c.lineTo(700,50)
+	// KRAJ KROVA
+	c.strokeRect(125,425,1550,25)
+	c.moveTo(150,450)
+	c.lineTo(175,475)
+	c.lineTo(1625,475)
+	c.lineTo(1650,450)
+	c.strokeRect(175,475,1450,25)
+	c.fill()
+	c.beginPath()
+	c.fillStyle = "yellow"
+	c.strokeRect(200,500,1400,100)
+	c.fillRect(200,500,1400,100)
+	c.fillStyle = "orange"
+	c.strokeRect(175,600,1450,25)
+	c.fillRect(175,600,1450,25)
+	c.beginPath()
+	c.fillStyle = "yellow"
+	c.strokeRect(200,626,1400,750)
+	c.fillRect(200,626,1400,750)
+	c.stroke()
+	
+
+	
+	for(i = 0; i < 3; i++) {
+		for(j = 0; j < 2; j++) {
+			c.fillStyle = "brown"
+			//Ram prozora
+			c.strokeRect(350+i*375,525,200,225)
+			c.fillRect(350+i*375,525,200,225)
+			//Unutrasnjost
+			c.strokeRect(375+i*375,550+j*100,150,75)
+			c.fillRect(375+i*375,550+j*100,150,75)
+			//
+			c.strokeRect(325+i*375,750,250,25)
+			c.fillStyle = "grey"
+			c.fillRect(325+i*375,750,250,25)
+				
+		}
+	}
+	//kockice u prozorima 1
+	for(i = 0; i < 3; i++) {
+		for(j = 0; j < 2; j++) {
+			c.fillStyle = "aqua"
+			c.strokeRect(375+i*50,550+j*100,50,75)
+			c.fillRect(375+i*50,550+j*100,50,75)
+		}
+	}
+	//kockice u prozorima 2
+	for(i = 0; i < 3; i++) {
+			for(j = 0; j < 2; j++) {
+				c.fillStyle = "aqua"
+				c.strokeRect(750+i*50,550+j*100,50,75)
+				c.fillRect(750+i*50,550+j*100,50,75)
+			}
+		}
+	//kockice u prozorima 3
+	for(i = 0; i < 3; i++) {
+			for(j = 0; j < 2; j++) {
+				c.fillStyle = "aqua"
+				c.strokeRect(1125+i*50,550+j*100,50,75)
+				c.fillRect(1125+i*50,550+j*100,50,75)
+			}
+		}
+
+
+		//Cigle s leve strane i sa desne strane
+
+	for(j = 0; j < 8; j++) {
+		for(i = 0; i < 2; i++) {
+			c.fillStyle = "darkRed"
+			c.strokeRect(200+i*1350,625+j*100,50,50)
+			c.fillRect(200+i*1350,625+j*100,50,50)
+			c.fillStyle = "grey"
+			c.strokeRect(200+i*1375,675+j*100,25,50)
+			c.fillRect(200+i*1375,675+j*100,25,50)
+		}
+		
+	}
+
+	//Zadnja dva prozora
+
+	for(i = 0; i < 2; i++) {
+		c.fillStyle = "grey"
+		c.strokeRect(325+i*375,825,250,50)
+		c.fillRect(325+i*375,825,250,50)
+		c.fillStyle = "brown"
+		c.strokeRect(350+i*375,875,200,375)
+		c.fillRect(350+i*375,875,200,375)
+	}
+
+	//Unutrasnjost prozora
+	for(i = 0; i < 2; i++) {
+		for(j = 0; j < 2; j++) {
+			c.fillStyle = "aqua"
+			c.strokeRect(375+i*375,900+j*175,150,150)
+			c.fillRect(375+i*375,900+j*175,150,150)
+		}
+	}
+	//1
+	for(i = 0; i < 3;i++) {
+		for(j = 0; j < 3; j++) {
+			c.strokeRect(375+i*50,900+j*50,50,50)
+		}
+	}
+
+	//2
+	for(i = 0; i < 3;i++) {
+			for(j = 0; j < 3; j++) {
+				c.strokeRect(375+i*50,1075+j*50,50,50)
+			}
+		}
+
+		
+	//3
+	for(i = 0; i < 3;i++) {
+			for(j = 0; j < 3; j++) {
+				c.strokeRect(750+i*50,900+j*50,50,50)
+			}
+		}
+	//4
+	for(i = 0; i < 3;i++) {
+			for(j = 0; j < 3; j++) {
+				c.strokeRect(750+i*50,1075+j*50,50,50)
+			}
+		}
+	c.fillStyle = "grey"
+	c.strokeRect(1000,825,500,50)
+	c.fillRect(1000,825,500,50)
+
+	for(i = 0; i < 2; i++) {
+		c.strokeRect(1050+i*350,900,50,450)
+		c.fillRect(1050+i*350,900,50,450)
+	}
+
+	for(i = 0; i < 2;i++) {
+		for(j = 0; j < 2; j++) {
+			c.strokeRect(1025+i*350,875+j*920,100,10)
+			c.fillRect(1025+i*350,875+j*920,100,10)
+			
+			c.strokeRect(1045+i*350,885+j*465,60,12)
+			c.fillRect(1045+i*350,885+j*465,60,12)
+		}
+	}
+	c.fillStyle = "darkRed"
+	c.strokeRect(1125,900,250,475)
+	c.fillRect(1125,900,250,475)
+
+	for(i = 0; i < 3;i++) {
+		for(j = 0; j < 3; j++) {
+			c.fillStyle = "orange"
+			c.fillRect(1150+i*75,925+j*125,50,100)
+		}
+	}
+
+	c.fillStyle = "grey"
+	c.strokeRect(175,1375,1450,25)
+	c.fillRect(175,1375,1450,25)
+
+	c.strokeRect(200,1400,1400,150)
+	c.fillRect(200,1400,1400,150)
+
+
+
+
+	c.fillStyle = "grey"
+	c.strokeRect(100,1550,1600,25)
+	c.fillRect(100,1550,1600,25)
+
+	c.strokeRect(50,1575,1700,25)
+	c.fillRect(50,1575,1700,25)
+
+	//Odzak
+	c.fillStyle = "orange"
+	c.strokeRect(150,50,200,25)
+	c.fillRect(150,50,200,25)
+	c.strokeRect(175,78,150,10)
+	c.fillRect(175,78,150,10)
+
+	c.strokeRect(180,87,140,10)
+	c.fillRect(180,90,140,10)
+
+	c.moveTo(200,100)
+	c.lineTo(200,400)
+	c.moveTo(300,100)
+	c.lineTo(300,325)
+	c.fill()
+	c.stroke()
+
+	for(i = 0; i < 14; i++) {
+		for(j = 0; j < 2;j++) {
+			c.strokeRect(200+i*100,1400+j*100,100,50)
+		}
+	}
+
+	for(i = 0; i < 13; i++) {
+		c.strokeRect(220+i*100,1450,100,50)	
+	}
+	c.fillStyle = "orange"
+	c.strokeRect(1025,1365,100,10)
+	c.fillRect(1025,1365,100,10)
+
+	c.strokeRect(1375,1365,100,10)
+	c.fillRect(1375,1365,100,10)
+
+	c.strokeRect(1100,1375,300,25)
+
+	c.strokeRect(1075,1400,350,25)
+	c.fillRect(1075,1400,350,25)
+	c.strokeRect(1050,1425,400,25)
+	c.fillRect(1050,1425,400,25)
+
+	c.strokeRect(1025,1450,450,25)
+	c.fillRect(1025,1450,450,25)
+
+	c.strokeRect(1000,1475,500,25)
+	c.fillRect(1000,1475,500,25)
+
+	c.strokeRect(975,1500,550,25)
+	c.fillRect(975,1500,550,25)
+
+	c.strokeRect(950,1525,600,25)
+	c.fillRect(950,1525,600,25)
+
+
+
+
+  }
+}
+	</script>
+	
+</html>
